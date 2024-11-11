@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tituloLabel = new System.Windows.Forms.Label();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
@@ -110,11 +111,24 @@
             this.PickTurno = new System.Windows.Forms.ComboBox();
             this.verTurnosDataGrid = new System.Windows.Forms.Button();
             this.generarFacturaBtn = new System.Windows.Forms.Button();
+            this.mostrarOcultarMenuButton = new System.Windows.Forms.Button();
+            this.menuLateralPanel = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.animacionMenuTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turnosDataGridView)).BeginInit();
             this.FacturaGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InformeDataGrid)).BeginInit();
+            this.menuLateralPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tituloLabel
@@ -123,7 +137,7 @@
             this.tituloLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.tituloLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tituloLabel.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloLabel.Location = new System.Drawing.Point(241, 29);
+            this.tituloLabel.Location = new System.Drawing.Point(317, 49);
             this.tituloLabel.Name = "tituloLabel";
             this.tituloLabel.Size = new System.Drawing.Size(267, 42);
             this.tituloLabel.TabIndex = 0;
@@ -132,9 +146,9 @@
             // logoPictureBox
             // 
             this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
-            this.logoPictureBox.Location = new System.Drawing.Point(41, 38);
+            this.logoPictureBox.Location = new System.Drawing.Point(132, 51);
             this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(179, 124);
+            this.logoPictureBox.Size = new System.Drawing.Size(179, 146);
             this.logoPictureBox.TabIndex = 1;
             this.logoPictureBox.TabStop = false;
             // 
@@ -144,7 +158,7 @@
             this.subTituloLabel.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.subTituloLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.subTituloLabel.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subTituloLabel.Location = new System.Drawing.Point(241, 82);
+            this.subTituloLabel.Location = new System.Drawing.Point(317, 110);
             this.subTituloLabel.Name = "subTituloLabel";
             this.subTituloLabel.Size = new System.Drawing.Size(245, 42);
             this.subTituloLabel.TabIndex = 2;
@@ -154,7 +168,7 @@
             // 
             this.calendarioTurnos.AllowDrop = true;
             this.calendarioTurnos.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.calendarioTurnos.Location = new System.Drawing.Point(94, 276);
+            this.calendarioTurnos.Location = new System.Drawing.Point(185, 289);
             this.calendarioTurnos.Name = "calendarioTurnos";
             this.calendarioTurnos.TabIndex = 4;
             this.calendarioTurnos.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarioTurnos_DateChanged);
@@ -170,7 +184,7 @@
             this.Horario,
             this.Estado,
             this.EMail});
-            this.turnosDataGridView.Location = new System.Drawing.Point(94, 553);
+            this.turnosDataGridView.Location = new System.Drawing.Point(185, 566);
             this.turnosDataGridView.Name = "turnosDataGridView";
             this.turnosDataGridView.Size = new System.Drawing.Size(541, 331);
             this.turnosDataGridView.TabIndex = 5;
@@ -533,7 +547,7 @@
             // PickCliente
             // 
             this.PickCliente.FormattingEnabled = true;
-            this.PickCliente.Location = new System.Drawing.Point(918, 122);
+            this.PickCliente.Location = new System.Drawing.Point(987, 124);
             this.PickCliente.Name = "PickCliente";
             this.PickCliente.Size = new System.Drawing.Size(262, 21);
             this.PickCliente.TabIndex = 27;
@@ -544,7 +558,7 @@
             this.label20.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 26.25F);
-            this.label20.Location = new System.Drawing.Point(801, 38);
+            this.label20.Location = new System.Drawing.Point(870, 40);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(271, 42);
             this.label20.TabIndex = 28;
@@ -554,7 +568,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(767, 122);
+            this.label21.Location = new System.Drawing.Point(836, 124);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(98, 13);
             this.label21.TabIndex = 29;
@@ -564,7 +578,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Location = new System.Drawing.Point(767, 162);
+            this.label22.Location = new System.Drawing.Point(836, 164);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(145, 13);
             this.label22.TabIndex = 31;
@@ -573,7 +587,7 @@
             // PickPago
             // 
             this.PickPago.FormattingEnabled = true;
-            this.PickPago.Location = new System.Drawing.Point(918, 162);
+            this.PickPago.Location = new System.Drawing.Point(987, 164);
             this.PickPago.Name = "PickPago";
             this.PickPago.Size = new System.Drawing.Size(262, 21);
             this.PickPago.TabIndex = 30;
@@ -582,7 +596,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Location = new System.Drawing.Point(767, 247);
+            this.label23.Location = new System.Drawing.Point(836, 249);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(86, 13);
             this.label23.TabIndex = 32;
@@ -590,7 +604,7 @@
             // 
             // MontoTextBox
             // 
-            this.MontoTextBox.Location = new System.Drawing.Point(918, 247);
+            this.MontoTextBox.Location = new System.Drawing.Point(987, 249);
             this.MontoTextBox.Name = "MontoTextBox";
             this.MontoTextBox.Size = new System.Drawing.Size(100, 20);
             this.MontoTextBox.TabIndex = 33;
@@ -599,7 +613,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Location = new System.Drawing.Point(1024, 250);
+            this.label24.Location = new System.Drawing.Point(1093, 252);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(42, 13);
             this.label24.TabIndex = 34;
@@ -609,7 +623,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(767, 289);
+            this.label25.Location = new System.Drawing.Point(836, 291);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(80, 13);
             this.label25.TabIndex = 35;
@@ -617,14 +631,14 @@
             // 
             // FechaPagoDateTimeP
             // 
-            this.FechaPagoDateTimeP.Location = new System.Drawing.Point(918, 289);
+            this.FechaPagoDateTimeP.Location = new System.Drawing.Point(987, 291);
             this.FechaPagoDateTimeP.Name = "FechaPagoDateTimeP";
             this.FechaPagoDateTimeP.Size = new System.Drawing.Size(200, 20);
             this.FechaPagoDateTimeP.TabIndex = 36;
             // 
             // ConfirmarPagoBtn
             // 
-            this.ConfirmarPagoBtn.Location = new System.Drawing.Point(918, 335);
+            this.ConfirmarPagoBtn.Location = new System.Drawing.Point(987, 337);
             this.ConfirmarPagoBtn.Name = "ConfirmarPagoBtn";
             this.ConfirmarPagoBtn.Size = new System.Drawing.Size(100, 23);
             this.ConfirmarPagoBtn.TabIndex = 37;
@@ -636,7 +650,7 @@
             // 
             this.enviarTurnoEmailCheck.AutoSize = true;
             this.enviarTurnoEmailCheck.BackColor = System.Drawing.Color.Transparent;
-            this.enviarTurnoEmailCheck.Location = new System.Drawing.Point(918, 380);
+            this.enviarTurnoEmailCheck.Location = new System.Drawing.Point(987, 382);
             this.enviarTurnoEmailCheck.Name = "enviarTurnoEmailCheck";
             this.enviarTurnoEmailCheck.Size = new System.Drawing.Size(137, 17);
             this.enviarTurnoEmailCheck.TabIndex = 38;
@@ -665,7 +679,7 @@
             this.label31.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label31.Font = new System.Drawing.Font("Times New Roman", 26.25F);
-            this.label31.Location = new System.Drawing.Point(790, 516);
+            this.label31.Location = new System.Drawing.Point(859, 518);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(130, 42);
             this.label31.TabIndex = 41;
@@ -675,7 +689,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Location = new System.Drawing.Point(785, 571);
+            this.label32.Location = new System.Drawing.Point(854, 573);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(65, 13);
             this.label32.TabIndex = 42;
@@ -685,7 +699,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Location = new System.Drawing.Point(785, 603);
+            this.label33.Location = new System.Drawing.Point(854, 605);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(54, 13);
             this.label33.TabIndex = 43;
@@ -693,21 +707,21 @@
             // 
             // FechaInicioDatePicker
             // 
-            this.FechaInicioDatePicker.Location = new System.Drawing.Point(866, 565);
+            this.FechaInicioDatePicker.Location = new System.Drawing.Point(935, 567);
             this.FechaInicioDatePicker.Name = "FechaInicioDatePicker";
             this.FechaInicioDatePicker.Size = new System.Drawing.Size(200, 20);
             this.FechaInicioDatePicker.TabIndex = 44;
             // 
             // FechaFinDatePicker
             // 
-            this.FechaFinDatePicker.Location = new System.Drawing.Point(866, 603);
+            this.FechaFinDatePicker.Location = new System.Drawing.Point(935, 605);
             this.FechaFinDatePicker.Name = "FechaFinDatePicker";
             this.FechaFinDatePicker.Size = new System.Drawing.Size(200, 20);
             this.FechaFinDatePicker.TabIndex = 45;
             // 
             // generarInformeBtn
             // 
-            this.generarInformeBtn.Location = new System.Drawing.Point(1093, 564);
+            this.generarInformeBtn.Location = new System.Drawing.Point(1162, 566);
             this.generarInformeBtn.Name = "generarInformeBtn";
             this.generarInformeBtn.Size = new System.Drawing.Size(140, 26);
             this.generarInformeBtn.TabIndex = 46;
@@ -723,7 +737,7 @@
             this.Fecha,
             this.MetodoPago,
             this.Monto});
-            this.InformeDataGrid.Location = new System.Drawing.Point(788, 643);
+            this.InformeDataGrid.Location = new System.Drawing.Point(857, 645);
             this.InformeDataGrid.Name = "InformeDataGrid";
             this.InformeDataGrid.Size = new System.Drawing.Size(344, 241);
             this.InformeDataGrid.TabIndex = 47;
@@ -749,7 +763,7 @@
             this.label34.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label34.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(99, 499);
+            this.label34.Location = new System.Drawing.Point(190, 512);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(422, 42);
             this.label34.TabIndex = 48;
@@ -774,7 +788,7 @@
             this.label36.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(99, 214);
+            this.label36.Location = new System.Drawing.Point(190, 227);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(181, 42);
             this.label36.TabIndex = 50;
@@ -785,7 +799,7 @@
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(245, 139);
+            this.label37.Location = new System.Drawing.Point(339, 170);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(140, 27);
             this.label37.TabIndex = 51;
@@ -826,7 +840,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Location = new System.Drawing.Point(767, 200);
+            this.label40.Location = new System.Drawing.Point(836, 202);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(94, 13);
             this.label40.TabIndex = 58;
@@ -835,14 +849,14 @@
             // PickTurno
             // 
             this.PickTurno.FormattingEnabled = true;
-            this.PickTurno.Location = new System.Drawing.Point(918, 200);
+            this.PickTurno.Location = new System.Drawing.Point(987, 202);
             this.PickTurno.Name = "PickTurno";
             this.PickTurno.Size = new System.Drawing.Size(262, 21);
             this.PickTurno.TabIndex = 57;
             // 
             // verTurnosDataGrid
             // 
-            this.verTurnosDataGrid.Location = new System.Drawing.Point(94, 890);
+            this.verTurnosDataGrid.Location = new System.Drawing.Point(185, 903);
             this.verTurnosDataGrid.Name = "verTurnosDataGrid";
             this.verTurnosDataGrid.Size = new System.Drawing.Size(145, 39);
             this.verTurnosDataGrid.TabIndex = 59;
@@ -852,7 +866,7 @@
             // 
             // generarFacturaBtn
             // 
-            this.generarFacturaBtn.Location = new System.Drawing.Point(1080, 335);
+            this.generarFacturaBtn.Location = new System.Drawing.Point(1149, 337);
             this.generarFacturaBtn.Name = "generarFacturaBtn";
             this.generarFacturaBtn.Size = new System.Drawing.Size(100, 23);
             this.generarFacturaBtn.TabIndex = 60;
@@ -860,12 +874,141 @@
             this.generarFacturaBtn.UseVisualStyleBackColor = true;
             this.generarFacturaBtn.Click += new System.EventHandler(this.generarFacturaBtn_Click);
             // 
+            // mostrarOcultarMenuButton
+            // 
+            this.mostrarOcultarMenuButton.Location = new System.Drawing.Point(564, 289);
+            this.mostrarOcultarMenuButton.Name = "mostrarOcultarMenuButton";
+            this.mostrarOcultarMenuButton.Size = new System.Drawing.Size(138, 56);
+            this.mostrarOcultarMenuButton.TabIndex = 62;
+            this.mostrarOcultarMenuButton.Text = "Mostrar/Ocultar Panel";
+            this.mostrarOcultarMenuButton.UseVisualStyleBackColor = true;
+            this.mostrarOcultarMenuButton.Click += new System.EventHandler(this.mostrarOcultarMenuButton_Click);
+            // 
+            // menuLateralPanel
+            // 
+            this.menuLateralPanel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.menuLateralPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.menuLateralPanel.Controls.Add(this.label18);
+            this.menuLateralPanel.Controls.Add(this.pictureBox1);
+            this.menuLateralPanel.Controls.Add(this.label14);
+            this.menuLateralPanel.Controls.Add(this.label15);
+            this.menuLateralPanel.Controls.Add(this.label16);
+            this.menuLateralPanel.Controls.Add(this.label13);
+            this.menuLateralPanel.Controls.Add(this.label12);
+            this.menuLateralPanel.Controls.Add(this.label6);
+            this.menuLateralPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuLateralPanel.Location = new System.Drawing.Point(0, 0);
+            this.menuLateralPanel.Name = "menuLateralPanel";
+            this.menuLateralPanel.Size = new System.Drawing.Size(250, 1010);
+            this.menuLateralPanel.TabIndex = 63;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(47, 925);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 42);
+            this.label18.TabIndex = 70;
+            this.label18.Text = "Salir";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 146);
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(27, 638);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(139, 42);
+            this.label14.TabIndex = 69;
+            this.label14.Text = "Facturas";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(27, 548);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 42);
+            this.label15.TabIndex = 68;
+            this.label15.Text = "Registro";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(27, 457);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(130, 42);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "Informe";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(27, 379);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(103, 42);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Pagos";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(27, 293);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 42);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "Turnos";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(27, 214);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(181, 42);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Calendario ";
+            // 
+            // animacionMenuTimer
+            // 
+            this.animacionMenuTimer.Interval = 20;
+            this.animacionMenuTimer.Tick += new System.EventHandler(this.animacionMenuTimer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1907, 1010);
+            this.Controls.Add(this.menuLateralPanel);
+            this.Controls.Add(this.mostrarOcultarMenuButton);
             this.Controls.Add(this.generarFacturaBtn);
             this.Controls.Add(this.verTurnosDataGrid);
             this.Controls.Add(this.label40);
@@ -931,6 +1074,9 @@
             this.FacturaGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InformeDataGrid)).EndInit();
+            this.menuLateralPanel.ResumeLayout(false);
+            this.menuLateralPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1019,6 +1165,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn MetodoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.Button mostrarOcultarMenuButton;
+        private System.Windows.Forms.Panel menuLateralPanel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Timer animacionMenuTimer;
     }
 }
 

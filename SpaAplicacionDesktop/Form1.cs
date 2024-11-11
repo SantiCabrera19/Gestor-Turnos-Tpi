@@ -16,6 +16,9 @@ namespace SpaAplicacionDesktop
 
         // Conexion a la base de datos mySQL 'gestion_turnos' desde el localhost
         string connectionString = "server=localhost;database=gestion_turnos;user=root;password=42331;";
+        private int menuLateralPanelTargetWidth; // Ancho objetivo del panel
+        private int menuLateralPanelStep; // Incremento/decremento del ancho en cada tick
+
 
         // Constructor principal por defecto
         public Form1()
@@ -710,6 +713,41 @@ namespace SpaAplicacionDesktop
         private void generarInformeBtn_Click(object sender, EventArgs e)
         {
             GenerarInforme();
+        }
+
+
+
+        // boton que controla el menu lateral "menuLateralPanel", hace que se oculta o se muestre, segun el estado actual
+        private void mostrarOcultarMenuButton_Click(object sender, EventArgs e)
+        {
+            if (menuLateralPanel.Width == 250)
+            {
+                menuLateralPanelTargetWidth = 60; // Ancho objetivo al ocultar
+                menuLateralPanelStep = -10; // Decrementar el ancho en 10 píxeles en cada tick
+            }
+            else
+            {
+                menuLateralPanelTargetWidth = 250; // Ancho objetivo al mostrar
+                menuLateralPanelStep = 10; // Incrementar el ancho en 10 píxeles en cada tick
+            }
+
+            animacionMenuTimer.Start(); // Iniciar el temporizador
+        }
+
+        private void animacionMenuTimer_Tick(object sender, EventArgs e)
+        {
+            // Modificar el ancho del panel
+            menuLateralPanel.Width += menuLateralPanelStep;
+
+            // Detener la animación cuando se alcanza el ancho objetivo
+            if (
+              (menuLateralPanelStep > 0 && menuLateralPanel.Width >= menuLateralPanelTargetWidth) ||
+              (menuLateralPanelStep < 0 && menuLateralPanel.Width <= menuLateralPanelTargetWidth)
+            )
+            {
+                menuLateralPanel.Width = menuLateralPanelTargetWidth;
+                animacionMenuTimer.Stop();
+            }
         }
     }
 }
